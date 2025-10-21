@@ -1,12 +1,10 @@
-class Car:
-    def __init__(self, plate, top_speed, speed = 0, distance = 0):
-        self.plate = plate
-        self.top_speed = top_speed
-        self.speed = speed
-        self.distance = distance
+from classes.auto import Auto
 
-opel = Car("MOR-0", "200 km/h",)
+auto1 = Auto("ABC-321", 249)
 
-print(f"Plate: {opel.plate}, Top speed: {opel.top_speed}, Speed: {opel.speed}, Distance: {opel.distance}")
-
-
+print(f"""
+Rekisteritunnus: {auto1.rekkari}
+Huippunopeus: {auto1.huippunopeus} km/h
+Hetkellinen nopeus: {auto1.nopeus} km/h
+Matka: {auto1.matka} km
+""")
