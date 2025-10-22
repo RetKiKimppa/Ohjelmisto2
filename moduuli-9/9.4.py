@@ -1,21 +1,27 @@
 from classes.auto import Auto
 import random
 
-
 autot = []
 
 for i in range(1, 11):
-    #arvo huippunopeus 100-200
     huippunopeus = random.randint(100, 200)
     autot.append(Auto("ABC-" + str(i), huippunopeus))
 
-kokonaismatka = 0
-while kokonaismatka < 10000:
+autokilpailu = True
+while autokilpailu:
     for auto in autot:
-        #arvo nopeuden muutos
-        #kutsu kiihdytä
+        muutos = random.randint(-10, 15)
+        auto.kiihdyta(muutos)
         auto.kulje(1)
-        #hae matkan arvo, jos yli 10000, lopeta kisa asettamalla autonmatka kokonaismatkaksi
+
+    for auto in autot:
+        if auto.matka >= 10000:
+            autokilpailu = False
 
 
-#googlaa joku talukkokirjasto tulostamiseen, python table libary
+
+for a in autot:
+    print(f"{a.rekkari} {a.matka} km")
+
+
+

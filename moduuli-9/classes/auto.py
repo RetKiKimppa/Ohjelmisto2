@@ -6,18 +6,22 @@ class Auto:
         self.matka = 0
 
     def kiihdyta(self, arvo:int):
-        if arvo > self.huippunopeus:
+        self.nopeus += arvo
+        if self.nopeus > self.huippunopeus:
             self.nopeus = self.huippunopeus
-        elif arvo < 0:
+        elif self.nopeus < 0:
             self.nopeus = 0
         else:
-            self.nopeus = arvo
+            return
 
     def kulje(self, aika:int):
         if aika >= 0:
-            self.matka = aika * self.nopeus
+            self.matka += aika * self.nopeus
         else:
-            print("Anna positiivinen tuntimäärä")
+            return "Anna positiivinen tuntimäärä"
+
+
+
 
 
 

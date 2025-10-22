@@ -1,21 +1,20 @@
 from classes.auto import Auto
 
-autot = []
-
 auto1 = Auto("ABC-321", 249)
-auto2 = Auto("LSJ-222", 300)
-auto3 = Auto("SFS-132", 150)
-auto4 = Auto("DKD-416", 400)
 
-autot.append(auto1)
-autot.append(auto2)
-autot.append(auto3)
-autot.append(auto4)
+print(f"""
+Rekisteritunnus: {auto1.rekkari}
+Huippunopeus: {auto1.huippunopeus} km/h
+Hetkellinen nopeus: {auto1.nopeus} km/h
+Matka: {auto1.matka} km
+""")
 
-for auto in autot:
-    print(f"""
-    Rekisteritunnus: {auto.rekkari}
-    Huippunopeus: {auto.huippunopeus} km/h
-    Hetkellinen nopeus: {auto.nopeus} km/h
-    Matka: {auto.matka} km
-    """)
+auto1.kiihdyta(30)
+auto1.kiihdyta(70)
+auto1.kiihdyta(50)
+
+print(f"Hetkellinen nopeus: {auto1.nopeus}")
+
+auto1.kiihdyta(-200)
+
+print(f"Hetkellinen nopeus: {auto1.nopeus}")
