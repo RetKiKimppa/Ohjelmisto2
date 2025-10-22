@@ -1,13 +1,15 @@
 class Hissi:
-    def __init__(self, kerros:int):
-        self.kerros = kerros
-        self.ylin_kerros = 10
-        self.alin_kerros = 0
+    def __init__(self, alin_kerros, ylin_kerros):
+        self.kerros = alin_kerros
+        self.ylin_kerros = ylin_kerros
+        self.alin_kerros = alin_kerros
 
-    def siirry_kerrokseen(kerros:int):
+    def siirry_kerrokseen(self, kerros:int):
+
         pass
 
     def kerro_ylos(self):
+
         pass
 
     def kerros_alas(self):
