@@ -1,4 +1,5 @@
 from classes.auto import Auto
+from prettytable import PrettyTable
 import random
 
 autot = []
@@ -19,9 +20,11 @@ while autokilpailu:
             autokilpailu = False
 
 
+table = PrettyTable()
 
-for a in autot:
-    print(f"{a.rekkari} {a.matka} km")
+table.field_names = ["Rekisterinumero", "Huippunopeus", "Hetkellinen nopeus", "Kuljettu matka"]
+for auto in autot:
+    table.add_row([auto.rekkari, str(auto.huippunopeus) + "km/h", str(auto.nopeus) + "km/h", str(auto.matka) + "km"])
 
-
+print(table)
 
