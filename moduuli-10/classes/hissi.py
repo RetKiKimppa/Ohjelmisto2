@@ -28,3 +28,4 @@ class Hissi:
                 self.kerros_ylos()
             elif new_kerros < self.kerros:
                 self.kerros_alas()
+        print("--------------------------------------")
