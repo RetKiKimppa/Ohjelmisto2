@@ -19,13 +19,3 @@ class Auto:
             self.matka += aika * self.nopeus
         else:
             return "Anna positiivinen tuntimäärä"
-
-
-
-
-
-
-        #laske kuinka paljon auto on kulkenut annetussa ajassa tietyllä nopeudella
-        #lisää kuljettu matka kokonais matkaan
-
-        #ehkä metodi, joka palauttaa ominaisuudet sanakirjana.
