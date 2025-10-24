@@ -9,6 +9,7 @@ class Kilpailu:
         pass
 
     def tulosta_tilanne(self):
+
         pass
 
     def kilpailu_ohi(self):
