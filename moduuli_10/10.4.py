@@ -1,7 +1,7 @@
 import random
 from classes.kilpailu import Kilpailu
 from classes.auto import Auto
-import textwrap
+
 
 autot = []
 
