@@ -11,8 +11,7 @@ class Auto:
             self.nopeus = self.huippunopeus
         elif self.nopeus < 0:
             self.nopeus = 0
-        else:
-            return
+
 
     def kulje(self, aika:int):
         if aika >= 0:
