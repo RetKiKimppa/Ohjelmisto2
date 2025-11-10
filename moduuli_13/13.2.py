@@ -14,15 +14,16 @@ app = Flask(__name__)
 @app.route('/kenttä/<icao>')
 
 def lentokenttahaku(icao):
-    sql = f"SELECT name FROM airport WHERE ident='{icao}'"
+    sql = f"SELECT name, municipality FROM airport WHERE ident='{icao}'"
     kursori = yhteys.cursor()
     kursori.execute(sql)
     tulos = kursori.fetchall()
     if kursori.rowcount > 0:
         for rivi in tulos:
             vastaus = {
+                "ICAO": icao,
                 "Name": rivi[0],
-                "ICAO": icao
+                "Municipality": rivi[1],
             }
     else:
         vastaus = {
