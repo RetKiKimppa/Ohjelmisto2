@@ -28,6 +28,7 @@ def lentokenttahaku(icao):
     else:
         vastaus = {
             "Name": 'not found',
+            "ICAO": 'no results',
         }
     return vastaus
 
