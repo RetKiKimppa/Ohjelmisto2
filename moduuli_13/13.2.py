@@ -11,7 +11,7 @@ yhteys = mysql.connector.connect(
 )
 
 app = Flask(__name__)
-app@route('/kenttä/<icao>')
+@app.route('/kenttä/<icao>')
 
 def lentokenttahaku(icao):
     sql = f"SELECT name FROM airport WHERE ident='{icao}'"
